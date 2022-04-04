@@ -111,8 +111,20 @@ namespace ProjectF
 
         private void Main_Load(object sender, EventArgs e)
         {
+            int resolutionX = System.Windows.Forms.SystemInformation.VirtualScreen.Width;
+            int resolutionY = System.Windows.Forms.SystemInformation.VirtualScreen.Height;
+
+            this.errText.Location = new Point(this.errText.Location.X * resolutionX / this.Width, this.errText.Location.Y * resolutionY / this.Height);
+            this.errText.Font = new Font(this.errText.Text, this.errText.Font.Size * resolutionX / this.Width);
+
+            this.winLogo.Location = new Point(this.winLogo.Location.X * resolutionX / this.Width, this.winLogo.Location.Y * resolutionY / this.Height);
+            this.winLogo.Size = new Size(this.winLogo.Size.Width * resolutionX / this.Width, this.winLogo.Size.Height * resolutionY / this.Height);
+
+            this.emoji.Location = new Point(this.emoji.Location.X * resolutionX / this.Width, this.emoji.Location.Y * resolutionY / this.Height);
+            this.emoji.Font = new Font(this.emoji.Text, this.emoji.Font.Size * resolutionX / this.Width);
+            
             this.Location = new Point(0, 0);
-            this.Size = new Size(System.Windows.Forms.SystemInformation.VirtualScreen.Width, System.Windows.Forms.SystemInformation.VirtualScreen.Height);
+            this.Size = new Size(resolutionX, resolutionY);
 
 
             DisableTaskManager();

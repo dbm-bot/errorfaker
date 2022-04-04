@@ -30,57 +30,59 @@ namespace ProjectF
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.ErrorText = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.emoji = new System.Windows.Forms.Label();
+            this.errText = new System.Windows.Forms.Label();
+            this.winLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.winLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // ErrorText
+            // emoji
             // 
-            this.ErrorText.AutoSize = true;
-            this.ErrorText.Font = new System.Drawing.Font("Microsoft YaHei UI", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorText.ForeColor = System.Drawing.Color.White;
-            this.ErrorText.Location = new System.Drawing.Point(104, 90);
-            this.ErrorText.Name = "ErrorText";
-            this.ErrorText.Size = new System.Drawing.Size(134, 156);
-            this.ErrorText.TabIndex = 0;
-            this.ErrorText.Text = ":(";
+            this.emoji.AutoSize = true;
+            this.emoji.Font = new System.Drawing.Font("Microsoft YaHei UI", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emoji.ForeColor = System.Drawing.Color.White;
+            this.emoji.Location = new System.Drawing.Point(104, 109);
+            this.emoji.Name = "emoji";
+            this.emoji.Size = new System.Drawing.Size(134, 156);
+            this.emoji.TabIndex = 0;
+            this.emoji.Text = ":(";
             // 
-            // label1
+            // errText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(124, 266);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(656, 93);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Your PC ran into a problem and needs to restart. We\'re\r\njust collecting some erro" +
+            this.errText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.errText.AutoSize = true;
+            this.errText.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errText.ForeColor = System.Drawing.Color.White;
+            this.errText.Location = new System.Drawing.Point(124, 324);
+            this.errText.Name = "errText";
+            this.errText.Size = new System.Drawing.Size(656, 93);
+            this.errText.TabIndex = 1;
+            this.errText.Text = "Your PC ran into a problem and needs to restart. We\'re\r\njust collecting some erro" +
     "r info, and then we\'ll restart for \r\nyou.";
             // 
-            // pictureBox1
+            // winLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(824, 286);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(339, 183);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.winLogo.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.winLogo.ErrorImage = null;
+            this.winLogo.Image = ((System.Drawing.Image)(resources.GetObject("winLogo.Image")));
+            this.winLogo.InitialImage = null;
+            this.winLogo.Location = new System.Drawing.Point(840, 265);
+            this.winLogo.Name = "winLogo";
+            this.winLogo.Size = new System.Drawing.Size(339, 183);
+            this.winLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.winLogo.TabIndex = 2;
+            this.winLogo.TabStop = false;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ErrorText);
+            this.Controls.Add(this.winLogo);
+            this.Controls.Add(this.errText);
+            this.Controls.Add(this.emoji);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "Main";
@@ -90,7 +92,7 @@ namespace ProjectF
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Main_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.winLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,9 +100,9 @@ namespace ProjectF
 
         #endregion
 
-        private System.Windows.Forms.Label ErrorText;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label emoji;
+        private System.Windows.Forms.Label errText;
+        private System.Windows.Forms.PictureBox winLogo;
     }
 }
 
